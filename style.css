@@ -49,33 +49,71 @@ a:visited {
 }
 
 #buttons {
-font-size: 16px;
-font-weight: bold;
-color: #fff;
-position: absolute;
-display: inline-block;
-width: 300px;
-height: 100;
-margin-top: 20px;
-margin-left: 31px;
-
+  display: flex;
 }
 
-button {
-  text-decoration: none;
-  outline: none;
+#left-buttons {
+   flex-basis: 1;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: space-between;
+  height: 250px;
+  width: 230px;
+  margin-top: 20px;
+  margin-left: 36px;
+  bbackground-color: red;
+}
+
+#right-buttons .button {
+  margin-bottom: 15px;
+}
+
+#right-buttons {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  justify-content: flex-start;
+  height: 250px;
+  margin: 20px 44px 0 0;
+}
+
+.button {
+  font-size: 19px;
+  box-shadow: 0px 4px 0px 0px #df5986;
+  font-family: 'Orbitron', sans-serif;
+  border-radius: 11px;
+  cursor: pointer;
+  padding: 9px 11px;
+  width: 34px;
+  height: 20px;
+  text-align: center;
+  margin-left: 11px;
 }
 
 
 .hot-pink {
-    font-size: 19px;
-    background-color: #ff6699;
-    box-shadow: 0px 4px 0px 0px #df5986;
-    font-family: 'Orbitron', sans-serif;
-    border-radius: 11px;
-    padding: 10px;
-    cursor: pointer;
+  background-color: #ff6699;
+}
 
+.white {
+  background-color: white;
+  color: #ff6699;
+}
+
+.zero {
+  flex-grow: 1;
+}
+
+.dot {
+
+}
+
+.equals {
+  padding: 35.5px 10px;
 }
 
 .hot-pink:active {
