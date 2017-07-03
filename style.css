@@ -1,0 +1,17 @@
+body {
+  background-color: #c9c7c8;
+}
+
+.calculator {
+  background-color: #f5a6c3;
+  height: 450px;
+  width: 350px;
+  margin-top: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 150px;
+  border-radius: 40px;
+  border: 0.5px solid white;
+  box-shadow: 6px 9px 20px 1px rgba(0, 0, 0, 0.68), inset -1px -6px 12px 0.1px #89847e;
+
+}
