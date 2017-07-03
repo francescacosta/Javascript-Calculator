@@ -26,4 +26,14 @@ body {
   font-size: 25px;
   color: #ff77aa;
   letter-spacing: 1px;
+
+#screen {
+  background-color: #8c7f88;
+  border: 3px solid #747273;
+  height: 70px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -15px;
+  border-radius: 10px;
 }
