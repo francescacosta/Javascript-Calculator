@@ -2,6 +2,14 @@ body {
   background-color: #c9c7c8;
 }
 
+a {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
 .calculator {
   background-color: #f5a6c3;
   height: 450px;
@@ -73,4 +81,16 @@ button {
 .hot-pink:active {
   box-shadow: none;
   margin-top: 3px;
+}
+
+.footer-text {
+  display: block;
+  text-align: center;
+  width: 100%;
+  color: #ff6699;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 15px;
+  letter-spacing: 0.08em;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
