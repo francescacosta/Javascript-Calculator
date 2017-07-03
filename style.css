@@ -37,6 +37,7 @@ body {
   margin-right: auto;
   margin-top: -15px;
   border-radius: 10px;
+  margin-bottom: 10px;
 }
 
 #buttons {
@@ -47,11 +48,29 @@ position: absolute;
 display: inline-block;
 width: 300px;
 height: 100;
-margin-top: 15px;
-margin-left: 20px;
+margin-top: 20px;
+margin-left: 31px;
+
 }
 
-button, button:hover, button:active, button:visited {
+button {
   text-decoration: none;
   outline: none;
+}
+
+
+.hot-pink {
+    font-size: 19px;
+    background-color: #ff6699;
+    box-shadow: 0px 4px 0px 0px #df5986;
+    font-family: 'Orbitron', sans-serif;
+    border-radius: 11px;
+    padding: 10px;
+    cursor: pointer;
+
+}
+
+.hot-pink:active {
+  box-shadow: none;
+  margin-top: 3px;
 }
