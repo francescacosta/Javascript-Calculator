@@ -58,6 +58,15 @@ a:visited {
   padding-top: 10px;
 }
 
+.formula {
+  font-family: 'Orbitron', sans-serif;
+  float: right;
+  font-size: 13px;
+  color: #3b3b3b;
+  margin-top: 55px;
+  margin-right: -36px;
+}
+
 #buttons {
   display: flex;
 }
@@ -112,6 +121,7 @@ a:visited {
 .white {
   background-color: white;
   color: #ff6699;
+
 
 }
 
