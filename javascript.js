@@ -83,7 +83,9 @@ ac.onclick = function() {
 }
 
 ce.onclick = function() {
- mainInput.innerHTML = "0";
+  resetMain();
+}
+
 
 divide.onclick = function() {
  setFormulaInput('&divide;')
