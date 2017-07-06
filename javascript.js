@@ -10,6 +10,7 @@ var ce = document.getElementById("CE");
 // Formula buttons
 var divide = document.getElementById("divide");
 var padAdd = document.getElementById("add");
+var padMultiply = document.getElementById("multiply");
 
 // Keypad numbers
 var pad0 = document.getElementById("0");
@@ -44,7 +45,7 @@ var setMainInput = function (value) {
  }
   main += value;
 
-  refreshMainInput(); 
+  refreshMainInput();
 }
 
 var setFormulaInput = function (value) {
