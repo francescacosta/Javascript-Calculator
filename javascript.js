@@ -1,16 +1,16 @@
 
-// Sreen Inputs
-var maininput = document.getElementsByClassName("input")[0];
+// Screen Inputs
+var mainInput = document.getElementsByClassName("input")[0];
 var formula = document.getElementsByClassName("formula")[0];
 
-//function buttons
+// Function buttons
 var ac = document.getElementById("AC");
 var ce = document.getElementById("CE");
 
-//formula buttons
-var divide = document.getElementById("/");
+// Formula buttons
+var divide = document.getElementById("divide");
 
-//keypad numbers
+// Keypad numbers
 var pad0 = document.getElementById("0");
 var pad1 = document.getElementById("1");
 var pad2 = document.getElementById("2");
@@ -22,67 +22,100 @@ var pad7 = document.getElementById("7");
 var pad8 = document.getElementById("8");
 var pad9 = document.getElementById("9");
 
+var padDot = document.getElementById("dot");
+
+// Screen Variables
+var main = '0';
+
+// Functions
+var refreshMainInput = function () {
+  mainInput.innerHTML = "0";
+  formula.innerHTML += " 0";
+}
+
+var resetAll = function () {
+
+}
+
+var setMainInput = function (value) {
+  if (main === '0' && value === '0') {
+    return;
+  } else if (main === '0' && value != '0') {
+     main = '';
+  } else if (value === '.' && main.indexOf('.') >= 0) {
+    return;
+  }
+
+  main += value;
+
+  refreshMainInput();
+}
 
 ac.onclick = function() {
- maininput.innerHTML = "0";
- formula.innerHTML = "0";
+  refreshMainInput();
 }
 
 divide.onclick = function() {
- maininput.innerHTML = "&divide;";
+ mainInput.innerHTML = "&divide;";
  formula.innerHTML += " &divide;";
 }
 
 ce.onclick = function() {
- maininput.innerHTML = "0";
+ mainInput.innerHTML = "0";
 }
 
 pad0.onclick = function() {
- maininput.innerHTML = "0";
- formula.innerHTML = "0";
+ // main += "0";
+ setMainInput("0");
+
+ // formula.innerHTML = "0";
 }
 
 pad1.onclick = function() {
- maininput.innerHTML = "1";
- formula.innerHTML = "1";
+  // main += "1";
+  setMainInput("1");
 }
 
 pad2.onclick = function() {
- maininput.innerHTML = "2";
+ mainInput.innerHTML = "2";
  formula.innerHTML = "2";
 }
 
 pad3.onclick = function() {
- maininput.innerHTML = "3";
+ mainInput.innerHTML = "3";
  formula.innerHTML += " 3";
 }
 
 pad4.onclick = function() {
- maininput.innerHTML = "4";
+ mainInput.innerHTML = "4";
  formula.innerHTML = "4";
 }
 
 pad5.onclick = function() {
- maininput.innerHTML = "5";
+ mainInput.innerHTML = "5";
  formula.innerHTML = "5";
 }
 
 pad6.onclick = function() {
- maininput.innerHTML = "6";
+ mainInput.innerHTML = "6";
  formula.innerHTML = "6";
 }
 
 pad7.onclick = function() {
- maininput.innerHTML = "7";
+ mainInput.innerHTML = "7";
  formula.innerHTML = "7";
 }
 
 pad8.onclick = function() {
- maininput.innerHTML = "8";
+ mainInput.innerHTML = "8";
  formula.innerHTML = "8";
 }
 
 pad9.onclick = function() {
- maininput.innerHTML = "9";
+ mainInput.innerHTML = "9";
  formula.innerHTML = "9";
+}
+
+padDot.onclick = function() {
+  setMainInput(".");
 }
