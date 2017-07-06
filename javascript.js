@@ -7,6 +7,9 @@ var formula = document.getElementsByClassName("formula")[0];
 var ac = document.getElementById("AC");
 var ce = document.getElementById("CE");
 
+//formula buttons
+var divide = document.getElementById("/");
+
 //keypad numbers
 var pad0 = document.getElementById("0");
 var pad1 = document.getElementById("1");
@@ -23,6 +26,11 @@ var pad9 = document.getElementById("9");
 ac.onclick = function() {
  maininput.innerHTML = "0";
  formula.innerHTML = "0";
+}
+
+divide.onclick = function() {
+ maininput.innerHTML = "&divide;";
+ formula.innerHTML += " &divide;";
 }
 
 ce.onclick = function() {
@@ -46,7 +54,7 @@ pad2.onclick = function() {
 
 pad3.onclick = function() {
  maininput.innerHTML = "3";
- formula.innerHTML = "3";
+ formula.innerHTML += " 3";
 }
 
 pad4.onclick = function() {
