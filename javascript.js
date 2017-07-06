@@ -81,55 +81,43 @@ ce.onclick = function() {
 }
 
 pad0.onclick = function() {
- // main += "0";
  setMainInput("0");
-
- // formula.innerHTML = "0";
 }
 
 pad1.onclick = function() {
-  // main += "1";
   setMainInput("1");
 }
 
 pad2.onclick = function() {
- mainInput.innerHTML = "2";
- formula.innerHTML = "2";
+  setMainInput("2");
 }
 
 pad3.onclick = function() {
- mainInput.innerHTML = "3";
- formula.innerHTML += " 3";
+  setMainInput("3");
 }
 
 pad4.onclick = function() {
- mainInput.innerHTML = "4";
- formula.innerHTML = "4";
+  setMainInput("4");
 }
 
 pad5.onclick = function() {
- mainInput.innerHTML = "5";
- formula.innerHTML = "5";
+  setMainInput("5");
 }
 
 pad6.onclick = function() {
- mainInput.innerHTML = "6";
- formula.innerHTML = "6";
+  setMainInput("6");
 }
 
 pad7.onclick = function() {
- mainInput.innerHTML = "7";
- formula.innerHTML = "7";
+  setMainInput("3");
 }
 
 pad8.onclick = function() {
- mainInput.innerHTML = "8";
- formula.innerHTML = "8";
+  setMainInput("8");
 }
 
 pad9.onclick = function() {
- mainInput.innerHTML = "9";
- formula.innerHTML = "9";
+  setMainInput("9");
 }
 
 padDot.onclick = function() {
