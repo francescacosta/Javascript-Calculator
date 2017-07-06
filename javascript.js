@@ -66,9 +66,15 @@ var refreshFormulaInput = function () {
     formulaInput.innerHTML = formula.join(' ');
   };
 }
+
+var resetMain = function() {
+  main = '0';
   refreshMainInput();
 }
 
+var resetFormula = function () {
+  formula = [];
+  refreshFormulaInput();
 }
 
 divide.onclick = function() {
