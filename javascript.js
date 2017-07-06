@@ -30,11 +30,6 @@ var main = '0';
 var formula = [];
 
 // Functions
-var refreshMainInput = function () {
-  mainInput.innerHTML = main;
-  formula.innerHTML = formula;
-}
-
 
 var setMainInput = function (value) {
   if (main === '0' && value === '0') {
@@ -57,6 +52,11 @@ var setFormulaInput = function (value) {
   resetMain();
   refreshFormulaInput();
 }
+
+var refreshMainInput = function () {
+  mainInput.innerHTML = main;
+}
+
 var refreshFormulaInput = function () {
   if (formula.length === 0) {
     formulaInput.innerHTML = '0';
