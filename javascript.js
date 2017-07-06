@@ -67,14 +67,14 @@ var refreshFormulaInput = function () {
   refreshMainInput();
 }
 
-ac.onclick = function() {
- mainInput.innerHTML = "0";
- formula.innerHTML += " 0";
 }
 
 divide.onclick = function() {
  mainInput.innerHTML = "&divide;";
  formula.innerHTML += " &divide;";
+ac.onclick = function() {
+  resetMain();
+  resetFormula();
 }
 
 ce.onclick = function() {
