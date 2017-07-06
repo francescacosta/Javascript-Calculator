@@ -97,6 +97,10 @@ multiply.onclick = function() {
  setFormulaInput('&times;')
 }
 
+subtract.onclick = function() {
+ setFormulaInput('&minus;')
+}
+
 pad0.onclick = function() {
  setMainInput("0");
 }
