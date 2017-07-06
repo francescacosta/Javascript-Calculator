@@ -26,7 +26,7 @@ var padDot = document.getElementById("dot");
 
 // Screen Variables
 var main = '0';
-var formula = '0';
+var formula = [];
 
 // Functions
 var refreshMainInput = function () {
@@ -52,6 +52,20 @@ var setMainInput = function (value) {
  }
   main += value;
 
+var setFormulaInput = function (value) {
+  formula.push(main)
+  formula.push(value)
+
+  resetMain();
+  refreshFormulaInput();
+}
+var refreshFormulaInput = function () {
+  if (formula.length === 0) {
+    formulaInput.innerHTML = '0';
+  } else {
+    formulaInput.innerHTML = formula.join(' ');
+  };
+}
   refreshMainInput();
 }
 
