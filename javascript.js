@@ -130,7 +130,7 @@ pad6.onclick = function() {
 }
 
 pad7.onclick = function() {
-  setMainInput("3");
+  setMainInput("7");
 }
 
 pad8.onclick = function() {
