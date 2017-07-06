@@ -9,6 +9,7 @@ var ce = document.getElementById("CE");
 
 // Formula buttons
 var divide = document.getElementById("divide");
+var padAdd = document.getElementById("add");
 
 // Keypad numbers
 var pad0 = document.getElementById("0");
@@ -122,4 +123,8 @@ pad9.onclick = function() {
 
 padDot.onclick = function() {
   setMainInput(".");
+}
+
+padAdd.onclick = function() {
+  setFormulaInput('+')
 }
