@@ -45,7 +45,10 @@ var setMainInput = function (value) {
   } else if (value === '.' && main.indexOf('.') >= 0) {
     return;
   }
-
+ if (main.length > 6) {
+   formula.innerHTML = "MAX NUMBER LIMIT REACHED";
+   return;
+ }
   main += value;
 
   refreshMainInput();
