@@ -34,9 +34,6 @@ var refreshMainInput = function () {
   formula.innerHTML = formula;
 }
 
-var resetAll = function () {
- main.innerHTML = "0"
-}
 
 var setMainInput = function (value) {
   if (main === '0' && value === '0') {
