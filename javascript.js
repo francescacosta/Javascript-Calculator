@@ -50,6 +50,10 @@ var setMainInput = function (value) {
 }
 
 var setFormulaInput = function (value) {
+  if (formula.join('').length >= 20) {
+    return;
+  }
+
   formula.push(main)
   formula.push(value)
 
