@@ -11,6 +11,7 @@ var ce = document.getElementById("CE");
 var divide = document.getElementById("divide");
 var padAdd = document.getElementById("add");
 var padMultiply = document.getElementById("multiply");
+var padSubtract = document.getElementById("subtract");
 
 // Keypad numbers
 var pad0 = document.getElementById("0");
