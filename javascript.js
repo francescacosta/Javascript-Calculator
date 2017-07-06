@@ -26,15 +26,16 @@ var padDot = document.getElementById("dot");
 
 // Screen Variables
 var main = '0';
+var formula = '0';
 
 // Functions
 var refreshMainInput = function () {
-  mainInput.innerHTML = "0";
-  formula.innerHTML += " 0";
+  mainInput.innerHTML = main;
+  formula.innerHTML = formula;
 }
 
 var resetAll = function () {
-
+ main.innerHTML = "0"
 }
 
 var setMainInput = function (value) {
@@ -55,7 +56,8 @@ var setMainInput = function (value) {
 }
 
 ac.onclick = function() {
-  refreshMainInput();
+ mainInput.innerHTML = "0";
+ formula.innerHTML += " 0";
 }
 
 divide.onclick = function() {
