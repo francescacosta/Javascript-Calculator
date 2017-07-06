@@ -1,7 +1,7 @@
 
 // Screen Inputs
 var mainInput = document.getElementsByClassName("input")[0];
-var formula = document.getElementsByClassName("formula")[0];
+var formulaInput = document.getElementsByClassName("formula")[0];
 
 // Function buttons
 var ac = document.getElementById("AC");
