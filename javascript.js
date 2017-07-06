@@ -77,9 +77,6 @@ var resetFormula = function () {
   refreshFormulaInput();
 }
 
-divide.onclick = function() {
- mainInput.innerHTML = "&divide;";
- formula.innerHTML += " &divide;";
 ac.onclick = function() {
   resetMain();
   resetFormula();
@@ -87,6 +84,9 @@ ac.onclick = function() {
 
 ce.onclick = function() {
  mainInput.innerHTML = "0";
+
+divide.onclick = function() {
+ setFormulaInput('&divide;')
 }
 
 pad0.onclick = function() {
