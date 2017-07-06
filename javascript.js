@@ -92,6 +92,10 @@ divide.onclick = function() {
  setFormulaInput('&divide;')
 }
 
+multiply.onclick = function() {
+ setFormulaInput('&times;')
+}
+
 pad0.onclick = function() {
  setMainInput("0");
 }
