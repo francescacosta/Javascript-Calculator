@@ -78,15 +78,15 @@ ce.onclick = function() {
 
 
 divide.onclick = function() {
- setFormulaInput('&divide;')
+  setFormula(' &divide; ');
 }
 
 multiply.onclick = function() {
- setFormulaInput('&times;')
+  setFormula(' &times; ');
 }
 
 subtract.onclick = function() {
- setFormulaInput('&minus;')
+  setFormula(' &minus; ');
 }
 
 add.onclick = function() {
