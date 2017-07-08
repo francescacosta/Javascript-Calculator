@@ -19,8 +19,7 @@ var formula = "0"
 
 //Functions
 var setMainInput = function (value) {
-
-  if (main === '0') {
+  if (main === '0' && value != '.') {
     main = "";
   }
 
@@ -48,7 +47,7 @@ var setFormula = function (value) {
     mainInput.innerHTML = main;
   }
 
-  if (formula === '0') {
+  if (formula === '0' && value != '.') {
     formula = "";
   }
 
@@ -82,7 +81,6 @@ ac.onclick = function() {
 ce.onclick = function() {
   resetMain();
 }
-
 
 divide.onclick = function() {
   setFormula(' &divide; ');
