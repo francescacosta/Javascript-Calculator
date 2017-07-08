@@ -14,10 +14,8 @@ var multiply = document.getElementById("multiply");
 var subtract = document.getElementById("subtract");
 
 // Screen Variables
-var main = '0';
-var formula = [];
-
-// Functions
+var main = "0"
+var formula = "0"
 
 var setMainInput = function (value) {
   if (main === '0' && value === '0') {
