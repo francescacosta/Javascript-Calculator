@@ -18,8 +18,7 @@ var setMainInput = function (value) {
     main = "";
   }
 
-  main += value;
-
+  main +=value;
   mainInput.innerHTML = main;
 }
 
@@ -35,7 +34,7 @@ var canUpdateMain = function(value) {
   return true;
 }
 
-var setFormula = function (value) {
+var setFormulaInput = function (value) {
 
   if (value === ' ÷ ' || value === ' + ' || value === ' − ' || value === ' × ' ) {
     main = '0';
@@ -74,10 +73,10 @@ var calculateFormula = function () {
   calculated = calculated.toString()
 
   formula = calculated;
-  formulaInput.innerHTML = calculated;
+  formulaInput.innerHTML = formula;
 
   main = calculated;
-  mainInput.innerHTML = calculated;
+  mainInput.innerHTML = main;
 }
 
 // Keypad Events
@@ -95,13 +94,13 @@ equals.onclick = function() {
 }
 
 var symbolPadPress = function (symbol) {
-  setFormula(symbol)
+  setFormulaInput(symbol)
 }
 
 var padPress = function(number) {
   if (canUpdateMain(number)) {
     setMainInput(number);
-    setFormula(number);
+    setFormulaInput(number);
   }
 }
 
