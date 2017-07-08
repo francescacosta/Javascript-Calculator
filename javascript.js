@@ -13,20 +13,6 @@ var padAdd = document.getElementById("add");
 var padMultiply = document.getElementById("multiply");
 var padSubtract = document.getElementById("subtract");
 
-// Keypad numbers
-var pad0 = document.getElementById("0");
-var pad1 = document.getElementById("1");
-var pad2 = document.getElementById("2");
-var pad3 = document.getElementById("3");
-var pad4 = document.getElementById("4");
-var pad5 = document.getElementById("5");
-var pad6 = document.getElementById("6");
-var pad7 = document.getElementById("7");
-var pad8 = document.getElementById("8");
-var pad9 = document.getElementById("9");
-
-var padDot = document.getElementById("dot");
-
 // Screen Variables
 var main = '0';
 var formula = [];
@@ -105,48 +91,13 @@ subtract.onclick = function() {
  setFormulaInput('&minus;')
 }
 
-pad0.onclick = function() {
- setMainInput("0");
 }
 
-pad1.onclick = function() {
-  setMainInput("1");
-}
-
-pad2.onclick = function() {
-  setMainInput("2");
-}
-
-pad3.onclick = function() {
-  setMainInput("3");
-}
-
-pad4.onclick = function() {
-  setMainInput("4");
-}
-
-pad5.onclick = function() {
-  setMainInput("5");
-}
-
-pad6.onclick = function() {
-  setMainInput("6");
-}
-
-pad7.onclick = function() {
-  setMainInput("7");
-}
-
-pad8.onclick = function() {
-  setMainInput("8");
-}
-
-pad9.onclick = function() {
-  setMainInput("9");
-}
-
-padDot.onclick = function() {
-  setMainInput(".");
+var padPress = function(number) {
+  if (canUpdateMain(number)) {
+    setMainInput(number);
+    setFormula(number);
+  }
 }
 
 padAdd.onclick = function() {
