@@ -18,8 +18,7 @@ var setMainInput = function (value) {
     main = "";
   }
 
-  main +=value;
-  mainInput.innerHTML = main;
+  setMain(main + value)
 }
 
 var canUpdateMain = function(value) {
@@ -45,26 +44,27 @@ var setFormulaInput = function (value) {
     formula = "";
   }
 
-  formula += value
-  formulaInput.innerHTML = formula;
+  setFormula(formula + value)
 }
 
 var resetMain = function () {
-  formula = formula.slice(0, -main.length);
-  formulaInput.innerHTML = formula;
+  setFormula(formula.slice(0, -main.length));
 
   if (formula === '') {
-    formula = '0';
-    formulaInput.innerHTML = formula;
+    setFormula('0')
   }
 
-  main = '0';
-  mainInput.innerHTML = main;
+  setMain('0')
 }
 
-var resetFormula = function () {
-  formula = '0';
+var setFormula = function (str) {
+  formula = str;
   formulaInput.innerHTML = formula;
+}
+
+var setMain = function (str) {
+  main = str;
+  mainInput.innerHTML = main;
 }
 
 var calculateFormula = function () {
@@ -72,17 +72,14 @@ var calculateFormula = function () {
 
   calculated = calculated.toString()
 
-  formula = calculated;
-  formulaInput.innerHTML = formula;
-
-  main = calculated;
-  mainInput.innerHTML = main;
+  setFormula(calculated)
+  setMain(calculated)
 }
 
 // Keypad Events
 ac.onclick = function() {
   resetMain();
-  resetFormula();
+  setFormula('0')
 }
 
 ce.onclick = function() {
@@ -105,5 +102,5 @@ var padPress = function(number) {
 }
 
 // setting initial values - "Turning on calculator"
-mainInput.innerHTML = main;
-formulaInput.innerHTML = formula;
+setMain('0')
+setFormula('0')
