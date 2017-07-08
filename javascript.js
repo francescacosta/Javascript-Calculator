@@ -17,54 +17,61 @@ var subtract = document.getElementById("subtract");
 var main = "0"
 var formula = "0"
 
+//Functions
 var setMainInput = function (value) {
-  if (main === '0' && value === '0') {
-    return;
-  } else if (main === '0' && value != '0') {
-     main = '';
-  } else if (value === '.' && main.indexOf('.') >= 0) {
-    return;
+
+  if (main === '0') {
+    main = "";
   }
- if (main.length >= 7) {
-   return;
- }
+
   main += value;
 
-  refreshMainInput();
-}
-
-var setFormulaInput = function (value) {
-  if (formula.join('').length >= 20) {
-    return;
-  }
-
-  formula.push(main)
-  formula.push(value)
-
-  resetMain();
-  refreshFormulaInput();
-}
-
-var refreshMainInput = function () {
   mainInput.innerHTML = main;
 }
 
-var refreshFormulaInput = function () {
-  if (formula.length === 0) {
-    formulaInput.innerHTML = '0';
-  } else {
-    formulaInput.innerHTML = formula.join(' ');
-  };
+var canUpdateMain = function(value) {
+  if (value === '.' && main.indexOf('.') >= 0) {
+    return false;
+  }
+
+  if (main.length >= 7)  {
+    return false;
+  }
+
+  return true;
 }
 
-var resetMain = function() {
+var setFormula = function (value) {
+
+  if (value === ' &divide; ' || value === ' + ' || value === ' &minus; ' || value === ' &times; ' ) {
+    main = '0';
+    mainInput.innerHTML = main;
+  }
+
+  if (formula === '0') {
+    formula = "";
+  }
+
+  formula += value
+  formulaInput.innerHTML = formula;
+}
+
+var resetMain = function () {
+  formula = formula.slice(0, -main.length);
+  formulaInput.innerHTML = formula;
+
+  if (formula === '') {
+    formula = '0';
+    formulaInput.innerHTML = formula;
+  }
+
   main = '0';
-  refreshMainInput();
+  mainInput.innerHTML = main;
 }
 
 var resetFormula = function () {
-  formula = [];
-  refreshFormulaInput();
+  formula = '0';
+  formulaInput.innerHTML = formula;
 }
 
 ac.onclick = function() {
