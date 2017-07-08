@@ -6,6 +6,7 @@ var formulaInput = document.getElementsByClassName("formula")[0];
 // Function buttons
 var ac = document.getElementById("AC");
 var ce = document.getElementById("CE");
+var equals = document.getElementById("equals");
 
 // Screen Variables
 var main = "0"
@@ -67,6 +68,11 @@ var resetFormula = function () {
   formulaInput.innerHTML = formula;
 }
 
+var calculateFormula = function () {
+  var calculated = eval(formula.replace('÷', '/').replace('−', '-').replace('×', '*'));
+  mainInput.innerHTML = calculated;
+}
+
 // Keypad Events
 ac.onclick = function() {
   resetMain();
@@ -75,6 +81,10 @@ ac.onclick = function() {
 
 ce.onclick = function() {
   resetMain();
+}
+
+equals.onclick = function() {
+  calculateFormula();
 }
 
 var symbolPadPress = function (symbol) {
