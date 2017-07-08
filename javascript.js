@@ -102,3 +102,6 @@ var padPress = function(number) {
   }
 }
 
+// setting initial values - "Turning on calculator"
+mainInput.innerHTML = main;
+formulaInput.innerHTML = formula;
