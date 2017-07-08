@@ -9,9 +9,9 @@ var ce = document.getElementById("CE");
 
 // Formula buttons
 var divide = document.getElementById("divide");
-var padAdd = document.getElementById("add");
-var padMultiply = document.getElementById("multiply");
-var padSubtract = document.getElementById("subtract");
+var add = document.getElementById("add");
+var multiply = document.getElementById("multiply");
+var subtract = document.getElementById("subtract");
 
 // Screen Variables
 var main = '0';
@@ -91,6 +91,8 @@ subtract.onclick = function() {
  setFormulaInput('&minus;')
 }
 
+add.onclick = function() {
+  setFormula(' + ');
 }
 
 var padPress = function(number) {
@@ -100,6 +102,3 @@ var padPress = function(number) {
   }
 }
 
-padAdd.onclick = function() {
-  setFormulaInput('+')
-}
