@@ -70,6 +70,11 @@ var resetFormula = function () {
 
 var calculateFormula = function () {
   var calculated = eval(formula.replace('÷', '/').replace('−', '-').replace('×', '*'));
+  
+  formula = calculated;
+  formulaInput.innerHTML = calculated;
+
+  main = calculated;
   mainInput.innerHTML = calculated;
 }
 
