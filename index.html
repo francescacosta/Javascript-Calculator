@@ -21,7 +21,7 @@
       <div id="left-buttons">
         <span class="button hot-pink" id="AC">AC</span>
         <span class="button hot-pink" id="CE">CE</span>
-        <span class="button white" id="divide">&divide;</span>
+        <span class="button white" id="divide" onclick="symbolPadPress(' &divide; ')">&divide;</span>
 
         <span class="button white" id="7" onclick="padPress('7')">7</span>
         <span class="button white" id="8" onclick="padPress('8')">8</span>
@@ -40,9 +40,9 @@
       </div>
 
       <div id="right-buttons">
-        <span class="button white" id="multiply">x</span>
-        <span class="button white" id="subtract">-</span>
-        <span class="button white" id="add">+</span>
+        <span class="button white" id="multiply" onclick="symbolPadPress(' &times; ')">x</span>
+        <span class="button white" id="subtract" onclick="symbolPadPress(' &minus; ')">-</span>
+        <span class="button white" id="add" onclick="symbolPadPress(' + ')">+</span>
         <span class="button white equals" id="equals">=</span>
       </div>
     </div>

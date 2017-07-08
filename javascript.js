@@ -7,12 +7,6 @@ var formulaInput = document.getElementsByClassName("formula")[0];
 var ac = document.getElementById("AC");
 var ce = document.getElementById("CE");
 
-// Formula buttons
-var divide = document.getElementById("divide");
-var add = document.getElementById("add");
-var multiply = document.getElementById("multiply");
-var subtract = document.getElementById("subtract");
-
 // Screen Variables
 var main = "0"
 var formula = "0"
@@ -42,7 +36,7 @@ var canUpdateMain = function(value) {
 
 var setFormula = function (value) {
 
-  if (value === ' &divide; ' || value === ' + ' || value === ' &minus; ' || value === ' &times; ' ) {
+  if (value === ' ÷ ' || value === ' + ' || value === ' − ' || value === ' × ' ) {
     main = '0';
     mainInput.innerHTML = main;
   }
@@ -73,6 +67,7 @@ var resetFormula = function () {
   formulaInput.innerHTML = formula;
 }
 
+// Keypad Events
 ac.onclick = function() {
   resetMain();
   resetFormula();
@@ -82,20 +77,8 @@ ce.onclick = function() {
   resetMain();
 }
 
-divide.onclick = function() {
-  setFormula(' &divide; ');
-}
-
-multiply.onclick = function() {
-  setFormula(' &times; ');
-}
-
-subtract.onclick = function() {
-  setFormula(' &minus; ');
-}
-
-add.onclick = function() {
-  setFormula(' + ');
+var symbolPadPress = function (symbol) {
+  setFormula(symbol)
 }
 
 var padPress = function(number) {
