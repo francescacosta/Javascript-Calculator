@@ -91,7 +91,11 @@ equals.onclick = function() {
 }
 
 var symbolPadPress = function (symbol) {
-  setFormulaInput(symbol)
+  if (formula[formula.length - 1] === ' ') {
+    return;
+  }
+
+  setFormulaInput(symbol);
 }
 
 var padPress = function(number) {
