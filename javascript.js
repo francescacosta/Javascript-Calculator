@@ -40,7 +40,7 @@ var setFormulaInput = function (value) {
     mainInput.innerHTML = main;
   }
 
-  if (formula === '0' && value != '.') {
+  if (formula === '0' && value != '.' && value != ' + ' && value != ' × ' && value != ' ÷ ') {
     formula = "";
   }
 
@@ -92,6 +92,10 @@ equals.onclick = function() {
 
 var symbolPadPress = function (symbol) {
   if (formula[formula.length - 1] === ' ') {
+    return;
+  }
+
+  if (formula === ' + ' && formula === ' ÷ ' && formula === ' × ') {
     return;
   }
 
