@@ -44,6 +44,11 @@ var setFormulaInput = function (value) {
     formula = "";
   }
 
+  if (formula.length >= 30)  {
+    formulaInput.innerHTML = "DIGIT LIMIT REACHED"
+    return;
+  }
+
   setFormula(formula + value)
 }
 
