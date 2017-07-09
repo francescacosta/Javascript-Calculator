@@ -13,7 +13,7 @@ a:visited {
 
 .calculator {
   background-color: #f5a6c3;
-  height: 450px;
+  height: 460px;
   width: 350px;
   margin-top: 10%;
   margin-left: auto;
@@ -41,7 +41,7 @@ a:visited {
   margin-right: auto;
   margin-top: -15px;
   border-radius: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 
   display: flex;
   flex-direction: column;
