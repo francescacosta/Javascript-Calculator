@@ -47,24 +47,27 @@ a:visited {
   margin-top: -15px;
   border-radius: 10px;
   margin-bottom: 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-bottom: 3px;
 }
 
 .input {
   font-family: 'Orbitron', sans-serif;
-  float: right;
   font-size: 45px;
   color: #3b3b3b;
-  padding-right: 10px;
+  float: right;
   padding-top: 10px;
+  padding-right: 10px;
 }
 
 .formula {
   font-family: 'Orbitron', sans-serif;
-  float: right;
   font-size: 13px;
   color: #3b3b3b;
-  margin-top: 55px;
-  margin-right: -36px;
+  padding-right: 11px;
 }
 
 #buttons {
